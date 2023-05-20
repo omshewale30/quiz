@@ -1,4 +1,5 @@
-THEME_COLOR = "#375362"
+THEME_COLOR = "#ffd58c"
+TEXT_COLOR="#FF5733"
 from tkinter import *
 from quiz_brain import QuizBrain
 class QuizInterface:
@@ -13,7 +14,7 @@ class QuizInterface:
         self.label.grid(row=0,column=1)
 
         self.canvas=Canvas(width=500,height=250, bg="white")
-        self.question_text=self.canvas.create_text(250,125,text="some Question text",fill=THEME_COLOR,font=("Arial",20,"italic"),width=400)
+        self.question_text=self.canvas.create_text(250,125,text="some Question text",fill=TEXT_COLOR,font=("Arial",20,"italic"),width=400)
         self.canvas.grid(row=1,column=0,columnspan=2,pady=50)
         tru_img=PhotoImage(file="images/true.png")
         self.tru_button=Button(image=tru_img,highlightthickness=0,command=self.true_pressed)
